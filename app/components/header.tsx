@@ -2,7 +2,7 @@ export default function Header(){
     return(
         <>
           <header className="navMain" data-aos='fade-down'>
-    <div className="container navCon border mx-auto p-5">
+    <div className="  navCon border mx-auto p-5">
         <div className="flex justify-between">
        <h1>MOCK Expence Managent module </h1>
           <div className="menu flex">

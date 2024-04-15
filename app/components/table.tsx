@@ -26,6 +26,7 @@ export default function Table(){
       <td>{dataR && dataR.date}</td>
       <td>Edit & Delete</td>
     </tr>
+   
 
   </tbody>
 </table>
