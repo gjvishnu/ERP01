@@ -23,8 +23,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <Provider store={store}>
-        {children}
+         {children}
         </Provider>
+        
         <ScrollRestoration />
         <Scripts />
       </body>

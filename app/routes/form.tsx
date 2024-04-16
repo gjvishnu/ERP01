@@ -33,20 +33,19 @@ export async function action({
   
 
 export default function(){
-   const data = useActionData<typeof action>();
-//console.log(data);
+  //const data = useActionData<typeof action>();
+  //console.log(data);
 
     return(
         <>
         <div className="  Formmain  ">
-        <Form  method="post">
-            
+        <Form  method="post">            
           <div> <input type="email" id="name" name="email" required style={{border:'1px solid red'}}/></div> 
           <div> <input type="password" id="password" name="password" required style={{border:'1px solid red'}}/> </div> 
           <div> <input type="submit" value="Login" style={{border:'1px solid red'}}/></div> 
-
         </Form>
         </div>
+        
         </>
     )
 }
