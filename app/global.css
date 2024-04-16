@@ -4,34 +4,15 @@
     font-optical-sizing: auto;
      font-style: normal;
 }
-
-.fromMainDiv{
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.colorP{
+  color: #5C57F5;
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
-
-  .submitinput{
-    cursor: pointer;
-  }
-  .Formmain{
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.linkFont{
+  font-size: 14px;
+}
+.homeMain{
+  height: 100vh;
+ 
+}
+.sideBarMain{
+background-color: #f0f0ff;}

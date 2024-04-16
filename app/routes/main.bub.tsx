@@ -1,7 +1,7 @@
 export default function Sub(){
     return(
         <>
-        <h1>Main BUB</h1>
+        <h1 className="text-center">Main BUB</h1>
              </>
     )
 }

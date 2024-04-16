@@ -1,10 +1,11 @@
 import { Outlet } from "@remix-run/react";
+import Home from "~/components/home";
 
 export default function Main(){
     return(
-<>
-<h1>Layout</h1>
+<div className="flex"> 
+<Home/>
 <Outlet/>
-</>
+</div>
     )
 }

@@ -3,7 +3,7 @@ import Home from "~/components/home";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "ERP01" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
  <>
- <Home/>
+<Home/>
  </>
   );
 }
