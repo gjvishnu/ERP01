@@ -1,6 +1,7 @@
 import type { ActionFunctionArgs } from "@remix-run/node"; // or cloudflare/deno
 import { json } from "@remix-run/node"; // or cloudflare/deno
 import { Form, useActionData } from "@remix-run/react";
+import axios from "axios";
 
 
 export async function action({
@@ -13,43 +14,26 @@ export async function action({
       const email = body.get('email');
       const password = body.get('password');
   
-      // Fetch the API endpoint with POST method and send form data
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
-  
-      if (!response.ok) {
-        // If the response status is not okay, throw an error
-        throw new Error('Failed to fetch');
-      }
-  
-      // Parse the JSON response
-      const data = await response.json();
+      const {data} = await axios.post(url,{email,password})
   
       // Assuming the API returns a message
       const message = data;
       console.log(message);
   
       // Return the message as JSON response
-      return json({ message });
+      return message;
   
-    } catch (error) {
+    } catch (e) {
       // If an error occurs during fetching, return an error response
-      console.error('Error fetching API:', error);
-      return json({ error: 'Failed to fetch API' }, { status: 500 });
+      const errormsg = e.response.data.message
+      console.log(errormsg);
+      return errormsg
     }
   }
   
 
 export default function(){
-    const data = useActionData<typeof action>();
+   const data = useActionData<typeof action>();
 //console.log(data);
 
     return(
